@@ -1,0 +1,6 @@
+#instalar_grafana_en_docker
+url: https://www.youtube.com/watch?v=bWXwKTGTCp4
+
+1.- docker ps
+2.- docker run -d --name grafana -p 80:3000 -v grafana_config:/etc/grafana -v grafana_data:/var/lib/grafana -v grafana_logs:/var/log/grafana grafana/grafana
+3.- *ip*:3001 o *ip*:3000

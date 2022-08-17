@@ -1,0 +1,9 @@
+USE keepAlive;
+
+
+CREATE TABLE Temperatura (
+    tempID int NOT NULL AUTO_INCREMENT,
+    temperatura float,
+    fecha datetime default now(),
+    PRIMARY KEY (tempID)
+);

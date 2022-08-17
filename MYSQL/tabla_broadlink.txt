@@ -1,0 +1,10 @@
+USE keepAlive;
+
+
+CREATE TABLE broadlink (
+    broadID int NOT NULL AUTO_INCREMENT,
+    temp float,
+    fecha datetime default now(),
+    PRIMARY KEY (broadID)
+);
+

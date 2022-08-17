@@ -1,0 +1,28 @@
+
+#instalar mysql en docker
+url: https://muylinux.xyz/como-configurar-mysql-con-docker-en-linux/
+
+1.- docker pull mysql:latest
+2.- docker images mysql
+3.- docker run --name mysql -p 5000:3306 -v mysql_volume:/var/lib/mysql/ -d -e "MYSQL_ROOT_PASSWORD=temp123" mysql
+4.- docker ps 
+5.- en caso de no iniciarse el contenedor (sudo docker start *nombre de imagen*)
+6.- docker exec -it mysql bash
+7.- mysql -u root -p
+8.- ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpassword';
+9.- create user 'gustavocastillo' IDENTIFIED WITH mysql_native_password BY 'mqtt96';
+10.- grant all privileges on *.* TO 'gustavocastillo';
+11.- flush privileges;
+
+#ver tablas
+1.- mysql -u root -p
+2.- show databases;
+3.- use *nombre de database*;
+4.- show tables;
+5.- select * from *nombre de tabla*;
+
+
+#conectarse a mysql desde workbench
+1.- descargar imagen desde pagina oficial
+2.- sudo apt install ./mysql-workbench-community_8.0.27-1ubuntu21.04_amd64.deb
+3.- configurar parametros en workbench
